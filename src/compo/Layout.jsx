@@ -1,20 +1,29 @@
 import { Link, Outlet } from "react-router-dom";
 
+
 function Layout() {
   return (
-    <div>
-      <h2>홈 페이지</h2>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/react-site/">Home</Link>
-          </li>
-          <li>
-            <Link to="/react-site/login">Login</Link>
-          </li>
-        
-        </ul>
-      </nav>
+    <div className="layout">
+      <header className="header">
+        <nav>
+          <ul style={{listStyleType: "none", display: "flex"}}>
+            <li className="li">
+              <Link to="/react-site/">Home</Link>
+            </li>
+            <li className="li">
+              <Link to="/react-site/login">Login</Link>
+            </li>
+             <li className="li">
+              <Link to="/react-site/Size">Size</Link>
+            </li>
+            <li className="li">
+              <Link to="/react-site/React">React</Link>
+            </li>
+
+          </ul>
+        </nav>
+      </header>
+      <h1>KJ WORK ROOM</h1>
       <Outlet></Outlet>
     </div>
   );

@@ -11,17 +11,72 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+
+/* .container {
+  display: flex;
+  width: 500px;
+  margin: 0;
+  padding: 10px;
+  border: 3px solid rgb(118, 222, 118);
+  border-radius: 20px;
+  text-align: center;
+  background-color: rgb(125, 125, 125);
+} */
+.container{
+  border-radius: 70%;
+  background-color: rgb(255, 200, 80);
+  width: 900px;
+  height: 200px;
+  margin: 0 auto;
+  align-content: center;
+  justify-items: center;
+
+}
+
+.layout{
+  border-radius: 50%;
+  background-color: coral;
+  width: 600px;
+  height: 150px;
+}
+
+h1{
+  margin: 0;
+  padding: 0;
+}
+
+.li {
+  margin-right: 3rem;
+  border: 2px dotted rgb(41, 49, 80);
+  border-radius: 50px;
+  padding: 2px;
+  
+}
+
+.li a {
+  color: rgb(41, 49, 80);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.li a:hover {
+  text-decoration: underline;
+}
+
 
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -39,4 +94,7 @@
 
 .read-the-docs {
   color: #888;
+}
+nav{
+  justify-items: center;
 }
