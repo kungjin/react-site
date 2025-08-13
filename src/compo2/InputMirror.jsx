@@ -9,8 +9,8 @@ export default function InputMirror(){
         <input type="text" 
         value={text}
         onChange={(e) => setText(e.target.value)} 
-        placeholder="입력하시든가"/>
-        <p>입력홀릿 값: {text}</p>
+        placeholder="입력하시오우"/>
+        <p>입려-욱 값: {text}</p>
         
         </>
     )
