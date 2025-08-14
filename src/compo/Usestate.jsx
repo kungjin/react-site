@@ -10,7 +10,6 @@ function Usestate(){
     return(
         <>
         <div style={{ border: '2px dotted #000',
-                
 
         }}>
            <ColorChange />
