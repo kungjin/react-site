@@ -11,18 +11,18 @@ const Ex_memo4 = () => {
 
     const config = useMemo(
         () => ({ theme }), [theme])
-        
-return (
-    <>
-        <Child config={config} />
-        <button onClick={() => setTheme(t => (t === "light" ? "dark" : "light"))}>
-            테마 변경
-        </button>
 
-        <button onClick={() => setCount(c => c + 1)}> {count}</button>
+    return (
+        <>
+            <Child config={config} />
+            <button onClick={() => setTheme(t => (t === "light" ? "dark" : "light"))}>
+                테마 변경
+            </button>
 
-    </>
-);
+            <button onClick={() => setCount(c => c + 1)}> {count}</button>
+
+        </>
+    );
 }
 
 

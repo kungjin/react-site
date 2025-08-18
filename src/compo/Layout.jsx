@@ -99,6 +99,15 @@ function Layout() {
           </li>
         </ul>
 
+        <ul style={{ listStyleType: "none", display: "flex" }}>
+
+          <li className="li">
+            <Link to="/react-site/sople_proj/so-proj1/App">Soeple</Link>
+          </li> 
+
+       </ul>
+
+
       </header>
 
 
