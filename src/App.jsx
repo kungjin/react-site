@@ -1,5 +1,4 @@
-import { BrowserRouter, Routes } from "react-router-dom"
-import { Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 // import { useState } from 'react'
 import './App.css'
 import Login from './compo/Login.jsx'
@@ -28,6 +27,11 @@ import Ex_useref3 from "./compo_useref/Ex_useref3.jsx"
 import Ex_useref4 from "./compo_useref/Ex_useref4.jsx"
 import Ex_useref5 from "./compo_useref/Ex_useref5.jsx"
 
+import Mini_Blog from './mini/Mini_Blog';
+import MainPage from './mini/components/pages/MainPage';
+import PostWritePage from './mini/components/pages/PostWritePage';
+import PostViewPage from './mini/components/pages/PostViewPage';
+
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -38,38 +42,43 @@ function App() {
 
         <BrowserRouter>
           <Routes>
-            <Route path="/react-site/" element={<Layout />} />
-            <Route index element={<Home />} />
-            <Route path="/react-site/login" element={<Login />} />
-            <Route path="/react-site/Size" element={<Size />} />
-            <Route path="/react-site/Usestate" element={<Usestate />} />
+            {/* 부모 라우트: Layout */}
+            <Route path="/react-site" element={<Layout />}>
+              {/* 인덱스(홈) */}
+              <Route index element={<Home />} />
 
-            <Route path="/react-site/Example1" element={<Example1 />} />
-            <Route path="/react-site/Example2" element={<Example2 />} />
-            <Route path="/react-site/Example3" element={<Example3 />} />
-            <Route path="/react-site/Example4" element={<Example4 />} />
-            <Route path="/react-site/Example5" element={<Example5 />} />
+              {/* 1단계 자식들 */}
+              <Route path="login" element={<Login />} />
+              <Route path="Size" element={<Size />} />
+              <Route path="Usestate" element={<Usestate />} />
+              <Route path="Example1" element={<Example1 />} />
+              <Route path="Example2" element={<Example2 />} />
+              <Route path="Example3" element={<Example3 />} />
+              <Route path="Example4" element={<Example4 />} />
+              <Route path="Example5" element={<Example5 />} />
+              <Route path="Ex_callback1" element={<Ex_callback1 />} />
+              <Route path="Ex_callback2" element={<Ex_callback2 />} />
+              <Route path="Ex_callback3" element={<Ex_callback3 />} />
+              <Route path="Ex_callback4" element={<Ex_callback4 />} />
+              <Route path="Ex_callback5" element={<Ex_callback5 />} />
+              <Route path="Ex_memo1" element={<Ex_memo1 />} />
+              <Route path="Ex_memo2" element={<Ex_memo2 />} />
+              <Route path="Ex_memo3" element={<Ex_memo3 />} />
+              <Route path="Ex_memo4" element={<Ex_memo4 />} />
+              <Route path="Ex_memo5" element={<Ex_memo5 />} />
+              <Route path="Ex_useref1" element={<Ex_useref1 />} />
+              <Route path="Ex_useref2" element={<Ex_useref2 />} />
+              <Route path="Ex_useref3" element={<Ex_useref3 />} />
+              <Route path="Ex_useref4" element={<Ex_useref4 />} />
+              <Route path="Ex_useref5" element={<Ex_useref5 />} />
 
-            <Route path="/react-site/Ex_callback1" element={<Ex_callback1 />} />
-            <Route path="/react-site/Ex_callback2" element={<Ex_callback2 />} />
-            <Route path="/react-site/Ex_callback3" element={<Ex_callback3 />} />
-            <Route path="/react-site/Ex_callback4" element={<Ex_callback4 />} />
-            <Route path="/react-site/Ex_callback5" element={<Ex_callback5 />} />
-
-            <Route path="/react-site/Ex_memo1" element={<Ex_memo1 />} />
-            <Route path="/react-site/Ex_memo2" element={<Ex_memo2 />} />
-            <Route path="/react-site/Ex_memo3" element={<Ex_memo3 />} />
-            <Route path="/react-site/Ex_memo4" element={<Ex_memo4 />} />
-            <Route path="/react-site/Ex_memo5" element={<Ex_memo5 />} />
-
-            <Route path="/react-site/Ex_useref1" element={<Ex_useref1 />} />
-            <Route path="/react-site/Ex_useref2" element={<Ex_useref2 />} />
-            <Route path="/react-site/Ex_useref3" element={<Ex_useref3 />} />
-            <Route path="/react-site/Ex_useref4" element={<Ex_useref4 />} />
-            <Route path="/react-site/Ex_useref5" element={<Ex_useref5 />} />
-
-
-
+              {/* Mini_blog 중첩 */}
+              <Route path="Mini_blog" element={<Mini_Blog />}>
+                <Route index element={<MainPage />} />
+                <Route path="post-write" element={<PostWritePage />} />
+                <Route path="post/:postId" element={<PostViewPage />} />
+              </Route>
+            </Route>
           </Routes>
         </BrowserRouter>
 
