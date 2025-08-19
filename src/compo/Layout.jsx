@@ -104,6 +104,15 @@ function Layout() {
           <li className="li">
             <Link to="Mini_blog">Mini Blog</Link>
           </li> 
+          <li className="li">
+            <Link to="Clock">Clock</Link>
+          </li> 
+          <li className="li">
+            <Link to="Comment">Comment</Link>
+          </li> 
+           <li className="li">
+            <Link to="CommentList">CommentList</Link>
+          </li> 
 
        </ul>
 

@@ -33,6 +33,9 @@ import MainPage from './mini/components/pages/MainPage';
 import PostWritePage from './mini/components/pages/PostWritePage';
 import PostViewPage from './mini/components/pages/PostViewPage';
 import BlobCursor from "./cursor/BlobCursor.jsx";
+import Clock from "./Cheapter/Clock.jsx"
+import Comment from "./Cheapter/Comment.jsx"
+import CommentList from "./Cheapter/CommentList.jsx"
 
 
 function App() {
@@ -99,6 +102,11 @@ function App() {
                 <Route path="post-write" element={<PostWritePage />} />
                 <Route path="post/:postId" element={<PostViewPage />} />
               </Route>
+              <Route path="Clock" element={<Clock />} />
+              <Route path="Comment" element={<Comment />} />
+              <Route path="CommentList" element={<CommentList />} />
+
+
             </Route>
           </Routes>
         </BrowserRouter>
