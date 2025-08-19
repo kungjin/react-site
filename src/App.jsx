@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 // import { useState } from 'react'
+
 import './App.css'
 import Login from './compo/Login.jsx'
 import Layout from './compo/Layout.jsx'
@@ -31,6 +32,7 @@ import Mini_Blog from './mini/Mini_Blog';
 import MainPage from './mini/components/pages/MainPage';
 import PostWritePage from './mini/components/pages/PostWritePage';
 import PostViewPage from './mini/components/pages/PostViewPage';
+import BlobCursor from "./cursor/BlobCursor.jsx";
 
 
 function App() {
@@ -39,6 +41,25 @@ function App() {
   return (
     <>
       <div className="container">
+
+        <BlobCursor
+          blobType="circle"
+          fillColor="#ff5927ff"
+          trailCount={3}
+          sizes={[60, 125, 75]}
+          innerSizes={[20, 35, 25]}
+          innerColor="rgba(255,255,255,0.8)"
+          opacities={[0.6, 0.6, 0.6]}
+          shadowColor="rgba(0,0,0,0.75)"
+          shadowBlur={5}
+          shadowOffsetX={10}
+          shadowOffsetY={10}
+          filterStdDeviation={30}
+          useFilter={true}
+          fastDuration={0.1}
+          slowDuration={0.5}
+          zIndex={9999}
+        />
 
         <BrowserRouter>
           <Routes>
